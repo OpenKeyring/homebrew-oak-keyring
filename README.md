@@ -1,11 +1,11 @@
-# homebrew-ok
+# homebrew-oak-keyring
 
 Homebrew tap for [ok](https://github.com/OpenKeyring/oak-keyring) — a terminal-first password manager.
 
 ## Install
 
 ```bash
-brew tap openkeyring/ok
+brew tap openkeyring/oak-keyring
 brew install ok
 ```
 
@@ -19,5 +19,5 @@ brew upgrade ok
 
 ```bash
 brew uninstall ok
-brew untap openkeyring/ok
+brew untap openkeyring/oak-keyring
 ```
