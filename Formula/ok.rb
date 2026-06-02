@@ -3,7 +3,7 @@ class Ok < Formula
   homepage "https://github.com/OpenKeyring/oak-keyring"
   version "0.8.0-preview.1"
   license "MIT"
-  head "https://github.com/OpenKeyring/oak-keyring.git", branch: "main"
+  head "https://github.com/OpenKeyring/oak-keyring.git", branch: "master"
 
   livecheck do
     url :homepage
