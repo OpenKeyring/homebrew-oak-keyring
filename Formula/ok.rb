@@ -1,8 +1,15 @@
 class Ok < Formula
-  desc "Terminal-first password manager by OpenKeyring"
+  desc "Terminal-first password manager with TUI for vault, sync and secrets"
   homepage "https://github.com/OpenKeyring/oak-keyring"
   version "0.8.0-preview.1"
   license "MIT"
+  head "https://github.com/OpenKeyring/oak-keyring.git", branch: "main"
+
+  livecheck do
+    url :homepage
+    regex(/^v?(\d+(?:\.\d+)*(?:-[\w.]+)?)$/i)
+    strategy :github_latest
+  end
 
   on_macos do
     on_arm do
