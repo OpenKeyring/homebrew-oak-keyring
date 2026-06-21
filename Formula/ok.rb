@@ -22,6 +22,22 @@ class Ok < Formula
     end
   end
 
+  # Linux (Linuxbrew) support. Artifacts ship from the first release that
+  # builds them. After that release is published, update `version`, the
+  # version segment in each URL, and both sha256 values from checksums.txt.
+  # The sha256 values below are all-zero placeholders until real artifacts
+  # exist; Linuxbrew installs will fail verification by design until then.
+  on_linux do
+    on_arm do
+      url "https://github.com/OpenKeyring/oak-keyring/releases/download/v0.8.0-preview.1/ok-v0.8.0-preview.1-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "0000000000000000000000000000000000000000000000000000000000000000"
+    end
+    on_intel do
+      url "https://github.com/OpenKeyring/oak-keyring/releases/download/v0.8.0-preview.1/ok-v0.8.0-preview.1-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "0000000000000000000000000000000000000000000000000000000000000000"
+    end
+  end
+
   def install
     bin.install "ok"
   end
